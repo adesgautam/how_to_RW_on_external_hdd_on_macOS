@@ -1,0 +1,7 @@
+sudo mkdir /Volumes/NTFS1
+sudo mkdir /Volumes/NTFS2
+diskutil list
+sudo umount /dev/disk2s1
+sudo umount /dev/disk2s2
+sudo /usr/local/bin/ntfs-3g /dev/disk2s1 /Volumes/NTFS1 -olocal -oallow_other
+sudo /usr/local/bin/ntfs-3g /dev/disk2s2 /Volumes/NTFS2 -olocal -oallow_other
